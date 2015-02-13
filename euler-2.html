@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Euler 2</title>
+	<script>
+		var Euler2 = function() {
+			var fibs = [1,2];
+			var sumOfEvens = 0;
+
+			while (fibs[fibs.length - 1] < 4000000) {
+				var fib = fibs[fibs.length - 1] + fibs[fibs.length - 2]
+				fibs.push(fib);
+			}
+
+			fibs.pop();
+
+			for (i in fibs) {
+				if (fibs[i] % 2 === 0) {
+					sumOfEvens += fibs[i];
+				}
+			}
+			
+			document.write("The sum of all even fibonacci terms smaller than four million: " + sumOfEvens);
+		}
+
+		window.onload(Euler2());
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
